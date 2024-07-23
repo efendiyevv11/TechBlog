@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/posts")
-@CrossOrigin(origins = {"http://localhost:8000", "http://localhost:63342"}) // Adjust to include both frontend URLs
+@CrossOrigin(origins = {"http://localhost:8080/api/posts"})
 public class PostController {
 
     @Autowired
@@ -31,13 +31,7 @@ public class PostController {
 
     @PostMapping
     public Post addPost(@RequestBody Post post) {
-        post.setTime(new Date()); // Set the current time
+        post.setTime(new Date());
         return postService.addPost(post);
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePost(@PathVariable String id) {
-        postService.deletePost(id);
-        return ResponseEntity.ok().build();
     }
 }

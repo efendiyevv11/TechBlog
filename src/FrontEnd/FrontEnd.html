@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Blog</title>
+    <title>TechBlog</title>
     <link rel="stylesheet" href="Design.css">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -20,14 +20,8 @@
     </div>
 </header>
 <main class="container">
-    <section id="posts">
-        <h2>Recent Posts</h2>
-        <div id="post-list">
-            <!-- Posts will be dynamically loaded here -->
-        </div>
-    </section>
     <section id="new-post">
-        <h2>Add New Post</h2>
+        <h2>Add a new post</h2>
         <form id="post-form">
             <div class="form-group">
                 <label for="title">Title</label>
@@ -37,8 +31,11 @@
                 <label for="content">Content</label>
                 <textarea id="content" name="content" required></textarea>
             </div>
-            <button type="submit">Add Post</button>
+            <button type="submit">Post</button>
         </form>
+    </section>
+    <section id="posts">
+        <h2>Latest Posts</h2>
     </section>
 </main>
 <footer>
@@ -46,6 +43,5 @@
         <p>&copy; 2024 Tech Blog. Made in Azerbaijan. All rights reserved.</p>
     </div>
 </footer>
-<script src="FrontEnd.js"></script>
 </body>
 </html>
